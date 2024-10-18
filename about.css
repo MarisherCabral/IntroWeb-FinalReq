@@ -1,0 +1,262 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/* Header */
+header {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/background1.jpg);
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    top: 0; 
+    z-index: 1000;
+    position: sticky;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.title h1 {
+    font-size: 48px;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* About Section */
+#about {
+    padding: 60px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#about h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about1 p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-item {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px;
+    text-align: center;
+}
+
+.about-item h3 {
+    font-size: 24px;
+}
+
+.about-item p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Grid for About Items */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.column {
+    flex: 1 1 45%;
+    margin: 10px;
+}
+
+hr {
+    width: 50px;
+    border: 2px solid #dfdfe2;
+    margin: 10px auto;
+}
+/* Video Container Styling */
+.video-container {
+    margin: 40px 0; /* Space around the video */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center the video */
+}
+
+.video-container iframe {
+    border-radius: none; /* Rounded corners for the video */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.video-container iframe:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.video h2{
+    text-align: center;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .social-media {
+    margin-top: 15px;
+}
+
+footer .social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+footer .social-media a:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+    background-color: gray;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: none;
+    background-color: gray;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+}
+
+.menu.active {
+    display: block;
+    
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    .nav-area {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        padding-right: 0;
+        border-right: none;
+        text-align: left;
+        width: 100%;
+        padding-left: 20px;
+    }
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer .social-media a img {
+        width: 25px;
+        height: 25px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .title h1 {
+        font-size: 15px; /* Further reduce font size for very small screens */
+    }
+
+    .wrapper {
+        padding: 5px; /* Minimize padding for smaller screens */
+    }
+}

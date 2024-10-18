@@ -1,0 +1,266 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/background1.jpg);
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    width: 100px;
+    border: none;
+}
+
+.title h1 {
+    font-size: 48px;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+/* General Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 50px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+caption {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+/* Table Header */
+thead th {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+    border-bottom: 3px solid #d0d0d5;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Table Body */
+tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #dcdcdc;
+    vertical-align: top;
+    text-align: justify;
+}
+
+/* Table Images */
+tbody td img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Alternating Row Background */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody td {
+        position: relative;
+        padding-left: 50%;
+    }
+
+    tbody td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    tbody td img {
+        max-width: 100%;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .social-media {
+    margin-top: 15px;
+}
+
+footer .social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+footer .social-media a:hover {
+    transform: scale(1.2);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer .social-media a img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+    background-color: gray;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: none;
+    background-color: gray;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+}
+
+.menu.active {
+    display: block;
+    
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    .nav-area {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        padding-right: 0;
+        border-right: none;
+        text-align: left;
+        width: 100%;
+        padding-left: 20px;
+    }
+}
